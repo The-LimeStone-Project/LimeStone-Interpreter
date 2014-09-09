@@ -27,6 +27,9 @@ int pLine = 0;
  */
 int currentStat = 0;
 
+int codeLogics[1][5000] = {0};
+string File[5000];
+
 void Interpreter_executer(int code){
     switch(code){
         case -1:
@@ -50,9 +53,8 @@ void Interpreter_executer(int code){
 }
 
 
-void Interpreter_solveLine(string expr){
-    int currentLn = pLine;
-    
+void Interpreter_solveLine(int pLine){
+    // Line Constructure.
     
     
     
@@ -99,7 +101,8 @@ void Interpreter_fileHandler(string file, string arg){
         pLine++;
         fs.getline(buffer, 300);
         ss << buffer;
-        Interpreter_solveLine(ss.str());
+        File[pLine] = ss.str();
+        Interpreter_solveLine(pLine);
     }
 }
 
