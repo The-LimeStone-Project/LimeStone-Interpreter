@@ -36,6 +36,7 @@ int main(int argc,char *argv[]) {
         cout << "> ";
         cin >> param >> argv[2];
         Interpreter_fileHandler(argv[2], "-f");
+        exit(0);
     } else {
         // string appname = argv[0];
         param = argv[1];
@@ -47,6 +48,7 @@ int main(int argc,char *argv[]) {
 	if(param == "-f") {
 		cout << "Start executing file!" << endl;
 		Interpreter_fileHandler(argv[2], "-f");
+        exit(0);
     } else {
         badParam();
         exit(0);
