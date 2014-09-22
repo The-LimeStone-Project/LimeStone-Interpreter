@@ -13,6 +13,7 @@
 #include <cstdlib>
 #include <cstring>
 
+
 // #include "keywords.h"
 using namespace std;
 
@@ -105,4 +106,15 @@ void Interpreter_fileHandler(string file, string arg){
         Interpreter_solveLine(pLine);
     }
 }
-
+/*
+tokens[] Interpreter_readLn(string s) {
+	tokens[] tk = new tokens[30];
+	
+	int top = 0;
+	int length = s.length();
+	for(i=0; i<lengh; i++) {
+		if((s[i] >= "a" && s[i] <= "z") || (s[i] >= "A" && s[i] <= "Z")) {
+			
+		}
+	}
+}*/
