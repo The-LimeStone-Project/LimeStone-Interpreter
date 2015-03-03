@@ -1,1 +1,1 @@
-This readme has moved. See: http://aurura.net/tlsp/readme.html
+Project moved to http://aurura.net:8086/root/LimeStone-Interpreter.
