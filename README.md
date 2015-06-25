@@ -1,1 +1,1 @@
-Project moved to http://aurura.net:8086/root/LimeStone-Interpreter.
+An interpreter for the LimeStone scripting lang.
