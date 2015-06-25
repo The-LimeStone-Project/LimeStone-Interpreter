@@ -17,6 +17,7 @@ Limestone is a set of grammar module enables you to code in natural language(see
 ***
 > There are three great virtues of a programmer; Laziness, Impatience and Hubris.   
 > Larry Wall. 
+
 we are introducing lazy programming to the Limestone. Following traits are applied in interpreting:  
 - Inside-declared variables. This includes if, loop and function code block, programmers can invoke these special variable without declaring them every time.  
 - Updatable variable: This declaration will set the variables to updatable, which means they will get updated when involing them in the code. We will use an algorithm to keep this quick.
@@ -27,25 +28,25 @@ Any support to Altoria.Pendragon@outlook.com, and you can report bugs just by op
 
 ## Sample code
 ***
-<code>
-# Our reign, of course, was built on sand and stones.
 
-Define a[10010] as struct:
+    # Our reign, of course, was built on sand and stones.
+
+    Define a[10010] as struct:
 	x, y, power, checked
-.
+    .
 
-# Firstly we need to get nodes and lines of the graph.
-Read n, l;
-Print: To describe a graph, enter start, end, power for each line.
-Loop from 1 to l:
+    # Firstly we need to get nodes and lines of the graph.
+    Read n, l;
+    Print: To describe a graph, enter start, end, power for each line.
+    Loop from 1 to l:
 	Read: a[index]->x, a[index]->y, a[index]->power.
-.
+    .
 
-Sort: in a, from 1 to l, by a[sort]->power in increase.
+    Sort: in a, from 1 to l, by a[sort]->power in increase.
 
-# Now, weve got a node list from least to most.
-# Its time to get the minimal spanning tree.
-Loop from 1 to l:
+    # Now, weve got a node list from least to most.
+    # Its time to get the minimal spanning tree.
+    Loop from 1 to l:
 	P <= get-root in a[index]->x;
 	Q <= get-root in a[index]->y;
 	If p equal than q: # In the same group, ignoring.
@@ -54,16 +55,15 @@ Loop from 1 to l:
 	If p not equal than q: # Add into same group.
 		Connect p with q;
 	.
-.
+    .
 
-function connect $a with $b:
+    function connect $a with $b:
 	root[get-root in a] <= get-root in b;
-.
+    .
 
-function get-root in $a:
+    function get-root in $a:
 	Loop while a not equal than root[a]:
 		a <= root[a];
 	.
-	return a;
-.
-</code>
+        return a;
+    .
